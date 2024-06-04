@@ -14,6 +14,9 @@ App de vote
 ### Installing
 
 * Install tailwindCSS
+* Xampp
+* PhpMyAdmin
+
 
 
 ### Executing program
