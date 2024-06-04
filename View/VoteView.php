@@ -3,6 +3,11 @@ require_once('Model/StudentManager.php');
 
 ob_start();
 ?>
+<head>
+<link rel="stylesheet" href="./public/Style.css">
+</head>
+
+<h1>C'est parti!</h1>
 
 <form>
     <?php
