@@ -1,6 +1,11 @@
 body{
-    background-color: rgb(255, 0, 0);
-}
-html{
-    background-color: deeppink;
+    background: rgb(67,140,215);
+    background: -moz-radial-gradient(circle, rgba(67,140,215,1) 0%, rgba(8,45,103,0.47942927170868344) 100%, rgba(0,212,255,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(67,140,215,1) 0%, rgba(8,45,103,0.47942927170868344) 100%, rgba(0,212,255,1) 100%);
+    background: radial-gradient(circle, rgba(67,140,215,1) 0%, rgba(8,45,103,0.47942927170868344) 100%, rgba(0,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#438cd7",endColorstr="#00d4ff",GradientType=1);
+     font-family: 'Inconsolata', monospace;
+    zoom: 90%; /* Dézoomer légérement */
+    color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
+    overflow-x: hidden; /* Enlever la barre du bas */
 }
