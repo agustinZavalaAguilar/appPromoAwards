@@ -12,9 +12,30 @@ ob_start();
 <form>
     <h2>L'apprénant radieux</h2>
     <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
     <h2>L'apprénant ami de tous</h2>
     <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
     <h2>L'apprénant grincheux</h2>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
+    <input type="radio" name="'apprenant_radieux" value=""/>
     <input type="radio" name="'apprenant_radieux" value=""/>
 </form>
 
