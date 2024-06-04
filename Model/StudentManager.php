@@ -1,21 +1,14 @@
 <?php
 
-$students= [
-    
-    [
-        'nom' => 'Tom',
-    ], 
-    [
-        'nom' => 'Ann',
-    ],
-    [
-        'nom' => 'Laure',
-    ],
-]; 
-Class 
-function getStudent($students){
-    
-    foreach($students as $student){
+$students= ['Tom', 'Ann', 'John'];
+
+$formateurs = ['Cedric', 'Christophe','Laetitia', 'Luc','Tony'];
+
+$categories = ['Le radieux',"L'ami de tous", "Le fêtard"];
+
+
+Class StudentManager{
+    public function getStudents(){
         
-    } 
+    }
 }

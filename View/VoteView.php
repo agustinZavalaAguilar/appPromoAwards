@@ -1,19 +1,23 @@
 <?php
-
+require_once('Model/StudentManager.php');
 
 ob_start();
 ?>
 
-
-<h1>C'est parti!</h1>
-
 <form>
-    <h2>L'apprénant radieux</h2>
-    <input type="radio" name="'apprenant_radieux" value=""/>
-    <h2>L'apprénant ami de tous</h2>
-    <input type="radio" name="'apprenant_radieux" value=""/>
-    <h2>L'apprénant grincheux</h2>
-    <input type="radio" name="'apprenant_radieux" value=""/>
+    <?php
+        foreach ($categories as $category)
+        {        
+            echo '<h2>' . $category . '<h2></br>';
+            foreach ($students as $student)
+            { 
+    ?>
+                <input type="radio" name="'apprenant_radieux" value=""/>
+    <?php
+                    echo  $student . '</br>';
+            }
+        }
+    ?>
 </form>
 
 <?php
