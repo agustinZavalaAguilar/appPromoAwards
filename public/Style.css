@@ -1,11 +1,20 @@
 body{
-    background: rgb(67,140,215);
-    background: -moz-radial-gradient(circle, rgba(67,140,215,1) 0%, rgba(8,45,103,0.47942927170868344) 100%, rgba(0,212,255,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(67,140,215,1) 0%, rgba(8,45,103,0.47942927170868344) 100%, rgba(0,212,255,1) 100%);
-    background: radial-gradient(circle, rgba(67,140,215,1) 0%, rgba(8,45,103,0.47942927170868344) 100%, rgba(0,212,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#438cd7",endColorstr="#00d4ff",GradientType=1);
+    background: rgb(58,93,180);
+    background: -moz-linear-gradient(122deg, rgba(58,93,180,1) 0%, rgba(96,160,219,1) 100%);
+    background: -webkit-linear-gradient(122deg, rgba(58,93,180,1) 0%, rgba(96,160,219,1) 100%);
+    background: linear-gradient(122deg, rgba(58,93,180,1) 0%, rgba(96,160,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a5db4",endColorstr="#60a0db",GradientType=1);
      font-family: 'Inconsolata', monospace;
     zoom: 90%; /* Dézoomer légérement */
-    color: rgb(255, 255, 255); /* Mettre la couleur de l'écriture en blanc */
+    color: rgb(0, 0, 0); /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
+    text-align: center;
+}
+
+form{
+    background-color: rgba(240, 248, 255, 0.555);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.48); 
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.48);
+    border-radius: 10px;
+    text-align: left;
 }
