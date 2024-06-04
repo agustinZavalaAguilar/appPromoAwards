@@ -4,7 +4,7 @@
 ob_start();
 ?>
 
-
+<link rel="stylesheet" href="./public/Style.css">
 <h1>C'est parti!</h1>
 
 <form>
