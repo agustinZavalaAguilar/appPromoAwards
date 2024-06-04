@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/Style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+//require('Controller/LoginController.php');
+require('Controller/VoterController');
+
+ $page =  $_GET['page'];
+
+if(isset($_GET['page']))
+
+switch ($page) {
+    case 'login': 
+         
+        break;
+
+    case 'vote' :
+        var_dump( getStudent($students));
+       break;
+
+    case 'admin' :
+        break;
+    default:        
+        break;
+}
