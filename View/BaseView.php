@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="./public/Style.css">
     <title>Document</title>
 </head>
+
+<header>
+    <h1>Votez pour vos candidats!</h1>
+</header>
 <body>
 
     <?= $content; ?>

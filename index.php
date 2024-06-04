@@ -1,6 +1,6 @@
 <?php
 //require('Controller/LoginController.php');
-require('Controller/VoterController');
+require('Controller/VoteController.php');
 
  $page =  $_GET['page'];
 
@@ -12,7 +12,8 @@ switch ($page) {
         break;
 
     case 'vote' :
-        var_dump( getStudent($students));
+        $voteController = new VoteController();
+        $voteController->displayCandidates();
        break;
 
     case 'admin' :
