@@ -7,8 +7,6 @@ ob_start();
 <link rel="stylesheet" href="./public/Style.css">
 </head>
 
-<h1>C'est parti!</h1>
-
 <form>
     <?php
         foreach ($categories as $category)
@@ -17,9 +15,13 @@ ob_start();
             foreach ($students as $student)
             { 
     ?>
-                <input type="radio" name="'apprenant_radieux" value=""/>
-    <?php
-                    echo  $student . '</br>';
+                <div class="student_card">
+                    <img class="student_image" src="<?= 'public/image/Apprenants/' . $student . '.png' ?>" />
+
+                    <input type="radio" name="'apprenant_radieux" value=""/>
+        <?php
+                        echo  $student . '</br>';
+                echo '</div>';
             }
         }
     ?>
