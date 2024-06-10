@@ -1,10 +1,6 @@
 body{
-    background: rgb(58,93,180);
-    background: -moz-linear-gradient(122deg, rgba(58,93,180,1) 0%, rgba(96,160,219,1) 100%);
-    background: -webkit-linear-gradient(122deg, rgba(58,93,180,1) 0%, rgba(96,160,219,1) 100%);
-    background: linear-gradient(122deg, rgba(58,93,180,1) 0%, rgba(96,160,219,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a5db4",endColorstr="#60a0db",GradientType=1);
-     font-family: 'Inconsolata', monospace;
+    font-family: 'Inconsolata', monospace;
+    background-color: #b5c0d6;
     zoom: 90%; /* Dézoomer légérement */
     color: rgb(0, 0, 0); /* Mettre la couleur de l'écriture en blanc */
     overflow-x: hidden; /* Enlever la barre du bas */
@@ -18,4 +14,8 @@ form{
     border-radius: 10px;
     margin: 50px;
     text-align: left;
+}
+h2{
+    background-color: rgba(255, 255, 255, 0.181);
+    display: flex;
 }
