@@ -13,7 +13,7 @@ switch ($page) {
 
     case 'vote' :
         $voteController = new VoteController();
-        $voteController->displayCandidates();
+        $voteController->displayChoices();
        break;
 
     case 'admin' :
