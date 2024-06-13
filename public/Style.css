@@ -1,22 +1,152 @@
-body{
-    font-family: 'Inconsolata', monospace;
-    background-color: #b5c0d6;
-    zoom: 90%; /* Dézoomer légérement */
-    color: rgb(0, 0, 0); /* Mettre la couleur de l'écriture en blanc */
-    overflow-x: hidden; /* Enlever la barre du bas */
+
+form{
+    border-radius: 10px;
+    margin: 50px;
+}
+
+
+
+.student_image{
+    height: 80px !important;
+    width: auto !important;
+    
+}
+
+.student_card{
+    transition: 0.3s;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+
+
+}
+
+h3{
     text-align: center;
 }
 
-form{
-    background-color: rgba(240, 248, 255, 0.555);
-    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.48); 
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.48);
-    border-radius: 10px;
-    margin: 50px;
-    text-align: left;
-}
-h2{
-    background-color: rgba(255, 255, 255, 0.181);
-    display: flex;
+body{
+    overflow-x: hidden;
 }
 
+img{
+    width: 77px;
+    height: auto;
+}
+
+.nav-link {
+font-size: 18px;
+}
+
+.btn-light {
+    border-radius: 50px;
+    text-transform: uppercase;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.section-apprenant{
+    padding-top: 45px;
+    height: 650px;    
+}
+
+.section-apprenant h3{
+    text-align: center;
+}
+
+#hero_banner img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.presentation{
+    background-color: rgb(52,58,64); 
+    padding-top: 3%;   
+}
+
+.presentation p {
+    color:whitesmoke;
+    padding: 3% 5% 3% 5%;
+}
+
+.presentation h3 {
+    color:whitesmoke;
+    padding: 3% 5% 3% 5%;
+}
+
+.row{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.row>*  {
+    width: fit-content !important;
+    align-items: center;
+    justify-content: center !important;
+}
+
+.candidate{
+    display: flex;
+    flex-direction: column;
+}
+
+.candidate img{
+    height: auto;
+    width: 5em;
+}
+
+.row h3{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.formulaire_inscription_email{
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+#email{
+    width: 90%;
+}
+
+
+footer{
+    width: 100% !important;
+    height: auto;
+}
+
+.countdown {
+    color: white !important;
+    margin-left: 2rem;
+}
+
+#count{
+    color: white !important;
+}
+
+
+.student_card img, .student_card p {
+    transition: filter 0.3s;
+}
+.student_card:hover img, .student_card:hover p {
+    filter: brightness(75%);
+}
+.student_card.selected img, .student_card.selected p {
+    filter: brightness(75%);
+}
+.btn-radio{
+    margin: -10px;
+}
+.btn-radio2{
+    margin: -5px;
+    margin-top: 10px;
+}
+.text-forma{
+    margin-top: 25px;
+}

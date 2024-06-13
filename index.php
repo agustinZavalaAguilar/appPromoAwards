@@ -7,17 +7,20 @@ require('Controller/VoteController.php');
 if(isset($_GET['page']))
 
 switch ($page) {
-    case 'login': 
-         
-        break;
 
     case 'vote' :
         $voteController = new VoteController();
+        if(isset($_POST)){
+            $voteController->insertVote($_POST);
+        }
         $voteController->displayChoices();
        break;
 
-    case 'admin' :
+    case 'results' :
+        $voteController = new VoteController();
+        $voteController->displayResults();
         break;
+
     default:        
         break;
 }
