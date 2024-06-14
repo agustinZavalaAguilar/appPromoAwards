@@ -15,8 +15,7 @@ Class VoteManager extends Manager{
     }
 
     public function addVote($vote) {
-        $db = $this->connection();
-        $existantEmail = $this->checkExistantEmail($vote);
+        $db = $this->connection();       
         $request = $db->prepare("INSERT INTO vote (email, id_categorie, id_candidat, statut) 
                                  VALUES (:email, :id_categorie, :id_candidat, :statut)");
     
@@ -47,13 +46,12 @@ Class VoteManager extends Manager{
         
     }
 
-    public function checkExistantEmail($vote){
+    public function checkExistantEmail($email){
         $db = $this->connection();
-
-        if(isset($vote['$email'])){
-            $email = $vote['email'];
-            $request = $db->query("SELECT email FROM vote WHERE email = :email");
-            $parameter = array (':email' => $email);
+        if(isset($email)){
+        
+            $request = $db->prepare("SELECT email FROM vote WHERE email = :email");
+            $parameter = array(':email' => $email);
             try{
                 $request->execute($parameter);
                 if(isset($request)){
@@ -66,5 +64,41 @@ Class VoteManager extends Manager{
                 echo 'Erreur : ' . $e->getMessage() ;
             }
         }
+    }
+
+    public function getVoterEmails(){
+        $db = $this->connection();
+        $request = "SELECT DISTINCT email, statut FROM `vote`";
+        $emails = $db->query($request);
+        return $emails->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function updateVoteStatus($email, $statut) {       
+        $db = $this->connection();    
+  
+        $request = "UPDATE vote SET statut = :statut WHERE email = :email";
+        $statement = $db->prepare($request);
+     
+        $parameters = [
+            ':statut' => $statut,
+            ':email' => $email
+        ];
+    
+        try {
+            $statement->execute($parameters);
+            
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+            return false;
+        }
+    }
+
+    public function getVoteResults() {
+//         SELECT categorie.nom_categorie, candidat.prenom, COUNT(*) as vote_count
+// FROM vote 
+// INNER JOIN categorie ON vote.id_categorie = categorie.id_categorie
+// INNER JOIN candidat ON candidat.id_candidat = vote.id_candidat
+// GROUP BY categorie.nom_categorie, candidat.prenom  
+// ORDER BY categorie.id_categorie ASC, vote_count DESC
+;
     }
 }    

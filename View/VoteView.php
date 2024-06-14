@@ -1,6 +1,4 @@
-<?php 
-var_dump($_POST);
-?>
+
 
 <?php
 ob_start();
@@ -8,7 +6,7 @@ ob_start();
 
 
 <section class="container">
-<form action="" method="post" class="container text-center mt-5">
+<form action="index.php?page=hasVoted" method="post" class="container text-center mt-5">
 <div class="text-forma" id="lesapprenants" >
         <h2>Les Apprenants</h2>
         </div>
