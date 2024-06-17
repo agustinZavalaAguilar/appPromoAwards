@@ -29,7 +29,7 @@ ob_start();
                                             <img class="student_image mt-3" src="<?php echo 'public/image/Apprenants/' . ($student['prenom']) . '.png'; ?>" alt="Image de <?php echo ($student['prenom']); ?>" />
                                             <p class="text-center"><?php echo ($student['prenom']); ?><br /></p>
                                         </label>
-                                        <input type="radio" id="<?php echo $inputId; ?>" name="votes[<?php echo ($category['id_categorie']); ?>]" value="<?php echo ($student['id_candidat']); ?>"class="btn-radio" />
+                                        <input type="radio" id="<?php echo $inputId; ?>" name="votes[<?php echo ($category['id_categorie']); ?>]" value="<?php echo ($student['id_candidat']); ?>"class="btn-radio" required/>
                                     </div>
                                 <?php } ?>
                             </div>
@@ -56,7 +56,7 @@ ob_start();
                                 <img class="student_image mt-3" src="<?php echo 'public/image/Formateurs/' . ($instructor['prenom']) . '.png'; ?>" alt="Image de <?php echo ($instructor['prenom']); ?>" />
                                 <p class="text-center"><?php echo ($instructor['prenom']); ?><br /></p>
                             </label>
-                            <input type="radio" id="<?php echo $inputId; ?>" name="votes[<?php echo ($category['id_categorie']); ?>]" value="<?php echo ($instructor['id_candidat']); ?>"class="btn-radio2" />
+                            <input type="radio" id="<?php echo $inputId; ?>" name="votes[<?php echo ($category['id_categorie']); ?>]" value="<?php echo ($instructor['id_candidat']); ?>"class="btn-radio2" required/>
                         </div>
                     <?php } ?>
                 </div>

@@ -92,13 +92,28 @@ Class VoteManager extends Manager{
         }
     }
 
-    public function getVoteResults() {
-//         SELECT categorie.nom_categorie, candidat.prenom, COUNT(*) as vote_count
-// FROM vote 
-// INNER JOIN categorie ON vote.id_categorie = categorie.id_categorie
-// INNER JOIN candidat ON candidat.id_candidat = vote.id_candidat
-// GROUP BY categorie.nom_categorie, candidat.prenom  
-// ORDER BY categorie.id_categorie ASC, vote_count DESC
-;
+    public function getVoteResults($role, $catId) {
+        $db = $this->connection(); 
+
+        $sqlQuery = "SELECT id_categorie, nom_categorie, 
+        string_agg(CONCAT(prenom, ' (', prenom_count, ')'), ', ' ORDER BY prenom_count DESC) AS candidates
+        FROM (
+        SELECT id_categorie, nom_categorie, prenom, prenom_count
+        FROM (
+        SELECT categorie.id_categorie, categorie.nom_categorie, candidat.prenom, COUNT(*) AS prenom_count,
+                ROW_NUMBER() OVER(PARTITION BY categorie.id_categorie ORDER BY COUNT(*) DESC) AS rn
+        FROM vote 
+        INNER JOIN categorie ON vote.id_categorie = categorie.id_categorie
+        INNER JOIN candidat ON candidat.id_candidat = vote.id_candidat
+        GROUP BY categorie.id_categorie, categorie.nom_categorie, candidat.prenom
+        ) AS ranked
+        WHERE rn <= 3
+        ) AS top_candidates
+        GROUP BY id_categorie, nom_categorie
+        ORDER BY id_categorie";
+ 
+
+        $request = $db->query($sqlQuery);
+        return $request->fetchAll();
     }
 }    

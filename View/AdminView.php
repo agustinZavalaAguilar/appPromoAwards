@@ -1,8 +1,9 @@
 <?php
 ob_start();
 ?>
-
-
+<pre>
+<?php var_dump($studentVoteCount); ?>    
+</pre>
 <main>    
 <h1>Administration des votes</h1>
 <section>
@@ -33,18 +34,40 @@ ob_start();
     </table>
 </section>
 <section>
+    <h2>Affichage de votes</h2>
+</section>
+<section>
     <h2>Décompte de votes : Les Apprenants</h2>
-    <?php foreach ($studentCategories as $category): ?>
+    <?php foreach ($studentVoteCount as $category): ?>
         <article class="category">
             <header class="category_title">
                 <h2><?= ($category['nom_categorie'])?></h2>
             </header>
+            <div class="row d-flex flex-column">
+
+                <div class="col-12">
+                    <?php 
+                    $finalArray = array();
+                    $asArr = explode(',', $category['candidates']);
+                    // print_r($asArr);
+
+                    foreach($asArr as $val){
+                    $tmp = explode(' ', $val);
+                    $finalArray[$tmp[0]] = $tmp[1];
+                    }
+                    ?>
+                        <div class="student-card ">
+                            <p></p>
+                        </div>
+                    
+                </div>
+            </div>
         </article>
     <?php endforeach; ?>
 </section>
 <section>
     <h2>Décompte de votes : Les Formateurs</h2>
-    <?php foreach ($instructorCategories as $category): ?>
+    <?php foreach ($instructorVoteCount as $category): ?>
         <article class="category">
             <header class="category_title">
                 <h2><?= ($category['nom_categorie'])?></h2>

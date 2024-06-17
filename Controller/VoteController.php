@@ -37,12 +37,16 @@ class VoteController{
     public function displayAdminPage(){
         $voteManager = new VoteManager();
         $voters = $voteManager->getVoterEmails();
-        $categoryRequest = new VoteManager();
-        $studentCategories = $categoryRequest->getStudentCategories();
-        $instructorCategories = $categoryRequest->getInstructorCategories();
+        // $studentVoteCount = $voteManager->getVoteResults('1');
+        // $instructorVoteCount = $voteManager->getVoteResults('2'); 
 
-        require('view/AdminView.php');
+        
+
+
+
+        require('view/AdminView.php');        
     }
+
     public function validation($email,$statut){
         $voteManager = new VoteManager();
         $voteManager -> updateVoteStatus($email,$statut);
